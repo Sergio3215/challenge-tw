@@ -98,7 +98,29 @@ function App() {
     setFilter(value);
   }
 
+  const setColorTab = (st1, st2) => {
+    try{
+      let tabs = document.querySelector('.tabs').children;
+
+      tabs[0].style.backgroundColor = st1;
+      tabs[1].style.backgroundColor = st2;
+    }
+    catch(err){
+
+    }
+  }
+
   const AccionarTab = (value) => {
+
+    let st1 = 'rgb(25, 24, 23)', st2 = 'rgb(20, 19, 18)';
+
+    if (value == 'adivinar') {
+      st1 = 'rgb(20, 19, 18)';
+      st2 = 'rgb(25, 24, 23)';
+    }
+
+    setColorTab(st1, st2);
+
     setMode(value);
   }
 
