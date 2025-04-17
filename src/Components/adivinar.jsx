@@ -49,13 +49,16 @@ export default function Adivinar({ opciones, setOpciones, question, setQuestion 
                     <button>Poner palabra ganadora</button>
                 </div> */}
                 <div>
-                    <input type="text" placeholder="Agrega la pregunta para el espectador" value={question}
+                    <input type="search" placeholder="Agrega la pregunta para el espectador" value={question}
                         onChange={(e) => {
                             setQuestion(e.target.value);
                         }} />
                 </div>
                 <div>
                     <button onClick={setOpcion}>Agregar Opciones</button>
+                    <button style={{
+                        marginLeft:'10px'
+                    }} onClick={()=>setOpciones([])}>Borrar Todas las Opciones</button>
                 </div>
                 <div className="opciones-container">
                     {

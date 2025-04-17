@@ -18,7 +18,7 @@ export default function ListWord({ arrMessage, filter }) {
                             )
                         })
                         :
-                        arrMessage.filter(m => m.message.toLowerCase() == filter.toLowerCase()).map((m, index) => {
+                        arrMessage.filter(m => m.message.toLowerCase().includes(filter.toLowerCase())).map((m, index) => {
                             return (
                                 <ShowChatMenssage msg={m} />
                             )
